@@ -1,0 +1,598 @@
+body{
+  backgroud:#E7B64C;
+}
+
+.btn.btn-default{
+  background:#6ABAC2;
+  border:#6ABAC2;
+}
+
+.navbar{
+  margin-bottom:0;
+  border:none;
+  background-color:transparent;
+  height:50px;
+  background:#5E6263;
+}
+
+
+
+.hero{
+  background-image: url('../img/landingPage.jpg');
+  background-size:cover;
+  border:none;
+}
+
+@media (min-width:992px) {
+  .hero .get-it{
+    text-align:right;
+    margin-top:80px;
+    padding-right:30px;
+  }
+}
+
+@media (max-width:992px) {
+  .hero .get-it{
+    text-align:center;
+  }
+}
+
+@media (max-width:992px) {
+  .hero .phone-preview{
+    text-align:center;
+  }
+}
+
+.hero .get-it h1, .hero .get-it p{
+  color:#fff;
+  text-shadow:2px 2px 3px rgba(0,0,0,0.3);
+  margin-bottom:40px;
+}
+
+.hero .get-it .btn{
+  margin-left:10px;
+  margin-bottom:10px;
+  text-shadow:none;
+}
+
+div.iphone-mockup{
+  position:relative;
+  max-width:250px;
+  margin:20px;
+  display:inline-block;
+}
+
+.iphone-mockup img.device{
+  width:100%;
+  height:auto;
+}
+
+.iphone-mockup .screen{
+  position:absolute;
+  width:88%;
+  height:77%;
+  top:12%;
+  border-radius:2px;
+  left:6%;
+  border:1px solid #444;
+  background-color:#aaa;
+  overflow:hidden;
+  background:url(../../assets/img/screen-content-iphone-6.jpg);
+  background-size:cover;
+  background-position:center;
+}
+
+.iphone-mockup .screen:before{
+  content:'';
+  background-color:#fff;
+  position:absolute;
+  width:70%;
+  height:140%;
+  top:-12%;
+  right:-60%;
+  transform:rotate(-19deg);
+  opacity:0.2;
+}
+
+.icon-feature{
+  text-align:center;
+}
+
+.icon-feature .glyphicon{
+  font-size:60px;
+}
+
+section.features{
+  background-color:#6abac2;
+  padding:40px 0;
+  color:#fff;
+}
+
+section.features2{
+  background-color:#e7b64c;
+  padding:40px 0;
+  color:#fff;
+}
+
+.features h2{
+  color:#fff;
+}
+
+.features .icon-features{
+  margin-top:15px;
+}
+
+.testimonials blockquote{
+  text-align:center;
+}
+
+section.testimonials{
+  margin:50px 0;
+}
+
+.site-footer{
+  padding:20px 0;
+  text-align:center;
+  background:white;
+}
+
+.site-footer h5{
+  color:inherit;
+  font-size:20px;
+}
+
+.site-footer .social-icons a:hover{
+  opacity:1;
+}
+
+.site-footer .social-icons a{
+  display:inline-block;
+  width:32px;
+  border:none;
+  font-size:20px;
+  border-radius:50%;
+  margin:4px;
+  color:#fff;
+  text-align:center;
+  background-color:#e7b64c;
+  height:32px;
+  opacity:0.8;
+  line-height:32px;
+}
+
+@media (min-width:768px) {
+  .site-footer .social-icons{
+    text-align:right;
+  }
+}
+
+div.jumbotron.hero-technology{
+  color:#fff;
+  text-align:center;
+  background-size:cover;
+  background-position:center;
+  padding-top:100px;
+  padding-bottom:100px;
+  background-color:white;
+  height:800px;
+}
+
+h1.hero-title, h2.hero-title, h3.hero-title{
+  text-shadow:0 2px 2px rgba(0,0,0,0.3);
+  color:#fff;
+  font-weight:500;
+}
+
+p.hero-subtitle{
+  max-width:600px;
+  margin:25px auto;
+  padding:10px 15px;
+  color:white;
+  text-shadow:0 1px 1px rgba(0,0,0,0.7);
+  font-weight:500;
+  font-size:40px;
+  margin-top: 20px;
+  text-align:center;
+}
+
+h1.titles{
+  font-weight:700;
+  color:white;
+}
+
+h2.parags{
+  font-weight:200;
+}
+
+#section1{
+  margin-top:-20px;
+}
+
+div.col-md-4{
+  text-align:center;
+  border:white;
+}
+
+h1.text-center.title1{
+  margin-bottom:-30px;
+}
+
+
+div.row.row1{
+  margin-top:-10px;
+  margin-bottom:78px;
+}
+
+/*h2.under-title1{
+  margin-bottom:30px;
+  color:grey;
+}*/
+
+div#iconscol.col-md-4{
+  margin-bottom:35px;
+}
+
+div.col-md-4.iconscol{
+  margin-top:100px;
+}
+
+span.fa.fa-map-marker.fa-5x{
+  color:#6ABAC2;
+}
+
+img.navbar-brand{
+  width:200px;
+  height:200px;
+  margin-top:-80px;
+}
+
+div.col-md-12.footer{
+  height:100px;
+  background:white;
+  margin-bottom:-30px;
+  text-align:left;
+}
+
+img.footer.logo{
+  width:100px;
+  margin-left:80px;
+  margin-top:-5px;
+}
+
+#middle {
+  margin: 0 auto;
+  background-color: white;
+  width: 100% auto;
+  opacity: .7;
+}
+
+
+img.screen1{
+  width:100%;
+}
+
+div.col-md-12.section1{
+}
+
+div.iphone-mockup{
+  position:relative;
+  max-width:350px;
+  margin:20px;
+}
+
+.iphone-mockup img.device{
+  width:100%;
+  height:auto;
+}
+
+.iphone-mockup .screen{
+  position:absolute;
+  width:88.25%;
+  height:77.5%;
+  top:12%;
+  border-radius:2px;
+  left:6%;
+  border:1px solid #444;
+  background-color:#aaa;
+  overflow:hidden;
+  background:url(../../assets/img/screen-content-iphone-6.jpg);
+  background-size:cover;
+  background-position:center;
+}
+
+.iphone-mockup .screen:before{
+  content:'';
+  background-color:#fff;
+  position:absolute;
+  width:70%;
+  height:140%;
+  top:-12%;
+  right:-60%;
+  transform:rotate(-19deg);
+  opacity:0.2;
+}
+
+div.col-md-4.phone1{
+  background-color:#6ABAC2;
+  margin-top:-22px;
+  height: auto;
+  /*width:80%;*/
+
+
+}
+
+div.col-md-4.phone3{
+  background-color:#8AC397;
+  margin-top:-22px;
+  height: auto;
+  /*width:80%;*/
+
+
+}
+
+div.col-md-4.phone2{
+  background-color:#e7b64c;
+  margin-top:-22px;
+  height: auto;
+  /*width:90%;*/
+
+}
+
+img.phoneimg{
+  width:100%;
+}
+
+h2.under-title{
+  color:white;
+  /*margin-bottom: 80px;*/
+  height: 80px;
+}
+
+img.device{
+}
+
+div.alert.alert-success{
+  background-color:#8AC397;
+  border-color:#8AC397;
+  height:10px;
+}
+
+div.alert.alert-success.two{
+  background:#6ABAC2;
+  border:#6ABAC2;
+}
+
+span.fa.fa-home.fa-5x{
+  color:#8AC397;
+}
+
+div.alert.alert-success.one{
+  background:#E7B64C;
+  border:#E7B64C;
+}
+
+div.row.appstore-colomn{
+  background:#5E6263;
+  height:200px;
+  margin-top:-10px;
+}
+
+img.badge-appstore{
+  width:200px;
+  margin-top:20px;
+}
+
+div.col-md-1{
+}
+
+div.col-md-1.col-color1{
+  background:#6ABAC2;
+  border:#6ABAC2;
+  height:10px;
+  margin-top:-30px;
+}
+
+div.col-md-1.col-color2{
+  background:#E7B64C;
+  border:#E7B64C;
+  height:10px;
+  margin-top:-30px;
+}
+
+body{
+  backgroud:#E7B64C;
+}
+
+div.row.row3{
+  margin-bottom: 100px;
+}
+
+div.jumbotron.hero-technology{
+  height:600px;
+}
+
+div.col-md-12.section2{
+  background:grey;
+  height:180px;
+  margin-top:-62px;
+}
+
+div.col-md-6.section2{
+  background:#6ABAC2;
+  height:700px;
+  margin-top:-62px;
+}
+
+div.col-md-6.section3{
+  background:#8AC397;
+  height:700px;
+  margin-top:-62px;
+}
+
+h1.title3{
+  color:white;
+  font-weight:700;
+}
+
+p.parag2{
+  color:white;
+}
+
+button.btn.btn-default{
+  background:#E7B64C;
+}
+
+div.row.section3{
+  background-color:white;
+  height:300px;
+  margin-top:-100px;
+}
+
+h1.uni.title{
+  color:#5E6263;
+  margin-top:50px;
+}
+
+button.btn.btn-default.uni.button{
+  margin-top:20px;
+  font-size:20px;
+}
+
+h3.uni.description{
+  color:white;
+  margin-top:-5px;
+  font-size:20px;
+}
+
+img.logo{
+  width:200px;
+}
+
+
+div.row.footerrow{
+  background:#e7b64c;
+  height:100px;
+  margin-top:-80px;
+}
+
+img.logo2{
+  width:150px;
+  margin-top:-120px;
+  margin-bottom:-120px;
+}
+
+img.footer-logo{
+  width:150px;
+  margin-top:-60px;
+  margin-left:px;
+}
+
+div.col-md-4.social{
+  margin-top:-22px;
+}
+
+div.container.social{
+  margin-top:-22px;
+}
+
+div.container.contatc=row{
+}
+
+div.container.contatc=row{
+}
+
+div.container.contact-row{
+  background:#e7b64c;
+}
+
+div.row.contact-row{
+  background:#5E6263;
+  height:500px;
+}
+
+input.form-control{
+  margin-top:20px;
+}
+
+textarea.input-lg{
+  margin-top:20px;
+  width:400px;
+  height:150px;
+  margin-bottom:50px;
+}
+
+.site-footer{
+  padding:20px 0;
+  text-align:center;
+}
+
+@media (min-width:768px) {
+  .site-footer h5{
+    text-align:left;
+  }
+}
+
+.site-footer h5{
+  color:inherit;
+  font-size:20px;
+}
+
+.site-footer .social-icons a:hover{
+  opacity:1;
+}
+
+.site-footer .social-icons a{
+  display:inline-block;
+  width:32px;
+  border:none;
+  font-size:20px;
+  border-radius:50%;
+  margin:4px;
+  color:#fff;
+  text-align:center;
+  background-color:#798FA5;
+  height:32px;
+  opacity:0.8;
+  line-height:32px;
+}
+
+@media (min-width:768px) {
+  .site-footer .social-icons{
+    text-align:right;
+  }
+}
+
+button.btn.btn-default.send{
+  background:white;
+  color:black;
+  margin-bottom:20px;
+  font-size:20px;
+  margin-top:-40px;
+}
+
+h1.text-center{
+  color:white;
+}
+
+img{
+}
+
+img.comp{
+  margin-bottom:20px;
+  margin-top:20px;
+}
+
+@media screen and (max-width: 480px) {
+    img.comp{
+      width: 380px;
+    }
+
+   .nav.navbar-nav.navbar-right{
+     background-color: #5E6263;
+   }
+
+}
+
+.navbar{
+  background: white;
+}
