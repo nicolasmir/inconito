@@ -15,6 +15,7 @@
 
 <body>
 
+<!-- header  start-->
 <div class="row">
     <div class="col-md-12">
       <nav id="navbar" style="background:transparent;" class="navbar navbar-default navbar-fixed-top">
@@ -33,11 +34,11 @@
               </div>
           </nav>
     </div>
-</div>
+</div><!-- header  end -->
 
 
 
-
+<!-- mobile demo start -->
     <div id="" style="background-image:url('assets/img/landingPage.jpg');" class="jumbotron hero-technology">
       <img src="assets/img/logo.png" width="150px" height="150px" style="text-align:center;" alt=""  />
 
@@ -69,19 +70,20 @@
     </div>
     <div id="section3" class="row section3">
 
-<div class="col-md-4"></div>
+<div class="col-md-4"></div> <!-- mobile demo end -->
 
+       <!-- vote section starts -->
         <div class="col-md-4">
-            <h1 class="uni title">Add your university it needs to be 2 lines </h1>
+            <h1 class="uni title">Add your university it needs t o be 2 lines </h1>
             <button  class="btn btn-default uni button" id="uni-btn" type="button" data-toggle="modal" data-target="#unimodal">Hurry up </button>
         </div>
 
-        <div class="col-md-4"></div>
+        <div class="col-md-4"></div><!-- vote section end -->
 
 
 
     </div>
-    </div>
+  </div> <!-- Contact Start -->
     <div style="margin-top:0px"; id="section4" class="row contact-row">
         <div class="col-md-12">
             <h1 class="text-center">Say Hi ! </h1></div>
@@ -89,20 +91,22 @@
         <div class="col-md-4">
           <form class="" action="index.html" method="post">
             <div class="form-group">
-              <input type="text" class="form-control hide-s" id="usr" placeholder="Name">
+              <input type="text" class="form-control hide-s" id="name_box" placeholder="Name">
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control hide-s" id="usr" placeholder="Email Addres">
+              <input type="text" class="form-control hide-s" id="email_box" placeholder="Email Addres">
             </div>
 
             <div class="form-group">
-              <textarea class="form-control" rows="5" id="comment" placeholder="Say something"></textarea>
+              <textarea class="form-control" rows="5" id="message_box" placeholder="Say something"></textarea>
             </div>
+
+            <button type="button" class="btn btn-default send" name="button">Send</button>
           </form>
 
-        </div>
-        <div id="section5" class="col-md-12">
+        </div><!-- Contact end -->
+        <div id="section5" class="col-md-12"><!-- Footer starts -->
             <footer class="site-footer">
                 <div id="middle">
                   <a href="https://www.aub.edu.lb/news/2015/Pages/carpooling-abillama.aspx"><img alt="AUB Logo" height="50" src="assets/img/1.png" width="72"></a>
@@ -116,12 +120,11 @@
                 </div>
             </footer>
         </div>
-    </div>
+    </div><!-- Footer end -->
 
-
+<!-- Voting Modal starts here -->
 <div class="modal fade" id="unimodal" role="dialog">
        <div class="modal-dialog">
-
          <!-- Modal content-->
          <div class="modal-content">
            <div class="modal-header">
@@ -132,8 +135,6 @@
               <input id="uni-email" class="form-control" type="email" name="email" value="" placeholder="Your University Email">
 
               <div style="text-align:left; margin-top:20px;">
-
-
                        <select id="uni-name" class="form-control" id="sel1">
                            <option value="select">Select your university</option>
                            <option value="AUB">AUB</option>
@@ -143,18 +144,14 @@
                            <option value="USJ">USJ</option>
                        </select>
 
-              </div>
 
            </div>
            <div class="modal-footer">
-             <button type="button" class="btn btn-default"  data-toggle="modal" data-target="#thanksmodal"  id="uni-submit">Okay!</button>
+             <button type="button" class="btn btn-default"  data-toggle="modal" data-target="#thanksmodal"  id="uni-submit">Done , See results !</button>
            </div>
          </div>
-
        </div>
-     </div>
-
-   </div>
+     </div> <!-- Voting Modal ends here -->
 
 
     <section class="testimonials"></section>
@@ -168,6 +165,8 @@
 <script type="text/javascript">
 
 $(document).ready(function(event){
+  $("#results_container").hide();
+//on scroll for navbar
   $(document).scroll(function(){
         $("#navbar").css("background-color", "#5E6263");
         $("#navbar-li").css("color", "white");
@@ -175,35 +174,37 @@ $(document).ready(function(event){
         $("#navbar-li3").css("color", "white");
         $("#navbar-li4").css("color", "white");
     });
-
+//iniatializing parse
   Parse.initialize("aOXZ3I0TAEEqKGZmBcsZKA9lPhduk9uYviqlGwBM", "7xnzHZK7mxCoK0jrDUwY01hB7KlWRbB8e6YUpImN");
   var user = Parse.Object.extend("User");
 
-function getPost(){
+  //getting the votes and priting it to the dom
+function getVotes(){
 
       var  theforce=[];
 var query = new Parse.Query(user);
   query.find({
     success: function(results) {
         for(var i in results){
-
       var uni=results[i].get("university");
       theforce.push(uni);
      }
     // console.log(theforce)
       var arrow = _.countBy(theforce);
-      console.log(arrow)
+      $('#aubres').html(arrow.AUB);
+      $('#baures').html(arrow.BAU);
+      $('#laures').html(arrow.LAU);
+      $('#usekres').html(arrow.USEK);
+      $('#usjres').html(arrow.USJ);
     },
     error: function(error) {
       console.log("Query error:"+error.message);
     }
     });
 }
-getPost();
-//console.log(theforce);
-  //universities = _.countBy(query,"uni");
-  //console.dir(universities);
+getVotes();
 
+//signin up to parse and checking the email address
  $("#uni-submit").click(function(event){
    event.preventDefault();
 
@@ -217,7 +218,7 @@ getPost();
    newUser.set("username",email);
    newUser.set("university",university);
 
-
+//saving the user
    newUser.save(null,{success:function(){
       console.log('Success');
       $(".modal-title").html("You Did it !");
@@ -227,36 +228,31 @@ getPost();
       console.log("There's an error , change your email !");
       $(".modal-title").html("This email was used before");
       $(".modal-title").css("color", "white");
-      $(".modal-header").css("background-color", "red")
-      ;
+      $(".modal-header").css("background-color", "red");
    }});
+
+//shwing votes  container
+ $("#results_container").show();
+
   });
 
+//some css changes
  $("#uni-btn").click(function(event){
    $(".modal-title").html("Vote for you uni !");
    $(".modal-title").css("color", "black");
    $(".modal-header").css("background-color", "transparent");
  });
 
+$("#send").click(function(){
+  var name = $('#name_box').val();
+  var email = $('#email_box').val();
+  var message = $('#message_box').val();
 
-
-$("#sendForm").click(function(){
-  var data = {
-      name: $("#name").val(),
-      email: $("#email").val(),
-      message: $("#message").val()
-  };
-  $.ajax({
-      type: "POST",
-      url: "email.php",
-      data: data,
-      success: function(){
-          $('.success').fadeIn(1000);
-      }
-  });
+//var email = "name:" + name + " email:" + email + " message" + message;
+var email = "Hello";
+console.log("HEllo");
 
 });
-
 
 });
 

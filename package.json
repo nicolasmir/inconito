@@ -1,0 +1,16 @@
+{
+  "name": "carpolo",
+  "version": "1.0.0",
+  "description": "Carpolo website ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://nicolaselmir@bitbucket.org/nicolaselmir/azure.git"
+  },
+  "author": "Nicolas El Mir",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/nicolaselmir/azure#readme"
+}
