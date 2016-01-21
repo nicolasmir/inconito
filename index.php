@@ -1,11 +1,27 @@
+<?php
+$to = 'elmirnicolas@gmail.com';
+$subject = 'From Carpolo Website';
+$name = $_POST['#name_box'];
+$from = $_POST['#email_box'];
+$text = $_POST['#message_box'];
 
+$message = <<<EMAIL
+From: $name , $from
+Message:
+$text
+EMAILs;
+
+if($_POST){
+mail($to ,  $subject,  $message )
+}
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <title>carpolo</title>
+    <title>Carpolo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="icon" type="image/ico" href="assets/img/logo.png"/>
@@ -89,7 +105,8 @@
             <h1 class="text-center">Say Hi ! </h1></div>
         <div class="col-md-4"></div>
         <div class="col-md-4">
-          <form class="" action="index.html" method="post">
+
+        <form class="" method="post">
             <div class="form-group">
               <input type="text" class="form-control hide-s" id="name_box" placeholder="Name">
             </div>
@@ -144,7 +161,13 @@
                            <option value="USJ">USJ</option>
                        </select>
 
-
+            <div id="results_container">
+                <h5 class="vote_item">AUB: <span id="aubres"></span> votes</h5>
+                <h5 class="vote_item">BAU: <span id="baures"></span> votes</h5>
+                <h5 class="vote_item">LAU: <span id="laures"></span> votes</h5>
+                <h5 class="vote_item">USEK: <span id="usekres"></span> votes</h5>
+                <h5 class="vote_item">USJ: <span id="usjres"></span> votes</h5>
+            </div>
            </div>
            <div class="modal-footer">
              <button type="button" class="btn btn-default"  data-toggle="modal" data-target="#thanksmodal"  id="uni-submit">Done , See results !</button>
@@ -243,16 +266,8 @@ getVotes();
    $(".modal-header").css("background-color", "transparent");
  });
 
-$("#send").click(function(){
-  var name = $('#name_box').val();
-  var email = $('#email_box').val();
-  var message = $('#message_box').val();
 
-//var email = "name:" + name + " email:" + email + " message" + message;
-var email = "Hello";
-console.log("HEllo");
 
-});
 
 });
 
